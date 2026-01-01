@@ -52,7 +52,9 @@ body {
 }
 
 .app-container {
-    width: 100%; max-width: 450px;
+    width: 100%; 
+    /* Đã tăng kích thước container từ 450px lên 600px */
+    max-width: 600px;
     background: var(--bg-app);
     color: var(--text-main);
     box-shadow: 0 0 30px rgba(0,0,0,0.1);
@@ -130,7 +132,9 @@ header {
 }
 .slideshow-container h3 { color: var(--secondary); font-size: 1rem; margin-bottom: 10px; text-align: center; }
 .slide-frame {
-    position: relative; width: 100%; height: 220px;
+    position: relative; width: 100%; 
+    /* Đã tăng chiều cao slideshow lên 320px */
+    height: 320px; 
     border-radius: 10px; overflow: hidden; background: #000;
 }
 #slide-img {
@@ -159,32 +163,45 @@ header {
 .fc-button { background-color: var(--secondary) !important; border: none !important; font-size: 0.7rem !important; }
 .fc-col-header-cell-cushion, .fc-daygrid-day-number { color: var(--text-main); text-decoration: none !important; }
 
-/* --- HIỆU ỨNG HOVER LỊCH (NEW) --- */
+/* --- HIỆU ỨNG LỊCH (FIXED CHO MOBILE) --- */
 .fc-daygrid-day {
     transition: background-color 0.2s ease;
     cursor: pointer;
-}
-.fc-daygrid-day:hover {
-    background-color: rgba(192, 108, 132, 0.15) !important; /* Màu hồng nhạt khi hover */
-}
-[data-theme="dark"] .fc-daygrid-day:hover {
-    background-color: rgba(255, 255, 255, 0.1) !important;
+    /* Ngăn việc bôi đen text khi chạm trên điện thoại */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* Tối ưu chạm */
+    touch-action: manipulation;
 }
 
-/* --- TOOLTIP STYLE (NEW) --- */
+/* Chỉ áp dụng hiệu ứng Hover trên thiết bị có chuột (Desktop) */
+@media (hover: hover) {
+    .fc-daygrid-day:hover {
+        background-color: rgba(192, 108, 132, 0.15) !important;
+    }
+    [data-theme="dark"] .fc-daygrid-day:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+/* --- TOOLTIP STYLE (FIXED) --- */
 #calendar-tooltip {
     position: absolute;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.9);
     color: #fff;
     padding: 8px 12px;
     border-radius: 6px;
     font-size: 0.85rem;
-    pointer-events: none; /* Chuột không tương tác với tooltip */
+    pointer-events: none; /* Chuột/tay không tương tác với tooltip */
     display: none;
     max-width: 200px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     line-height: 1.4;
+    /* Ngăn tooltip bị xuống dòng đột ngột làm nhảy layout */
+    white-space: normal;
 }
 [data-theme="dark"] #calendar-tooltip {
     background: rgba(255, 255, 255, 0.9);
@@ -199,7 +216,7 @@ header {
 
 .timetable-controls {
     display: flex; gap: 0; margin-bottom: 20px; 
-    background: var(--border-color); /* Đổi màu nền thanh trượt */
+    background: var(--border-color);
     padding: 5px; border-radius: 50px; 
     position: relative;
     box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
