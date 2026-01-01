@@ -23,13 +23,13 @@
 
 /* --- DARK MODE VARIABLES --- */
 [data-theme="dark"] {
-    --primary: #d9869e;       /* Sáng hơn chút để nổi trên nền tối */
+    --primary: #d9869e;       
     --primary-light: #ff8fa3; 
     --secondary: #a696b5;     
     --accent: #eebb99;
 
     --bg-body: #121212;
-    --bg-app: #1e1e2e;        /* Màu nền tối tím than */
+    --bg-app: #1e1e2e;        
     --bg-card: #2a2a3c;
     --text-main: #e0e0e0;
     --text-sub: #a0a0a0;
@@ -53,13 +53,14 @@ body {
 
 .app-container {
     width: 100%; 
-    /* Đã tăng kích thước container từ 450px lên 600px */
     max-width: 600px;
     background: var(--bg-app);
     color: var(--text-main);
     box-shadow: 0 0 30px rgba(0,0,0,0.1);
     min-height: 100vh; position: relative;
     padding-bottom: 20px;
+    /* Thêm overflow-x hidden để tránh trang bị trượt ngang nếu có phần tử tràn */
+    overflow-x: hidden; 
 }
 
 /* Header & Nav */
@@ -133,8 +134,8 @@ header {
 .slideshow-container h3 { color: var(--secondary); font-size: 1rem; margin-bottom: 10px; text-align: center; }
 .slide-frame {
     position: relative; width: 100%; 
-    /* Đã tăng chiều cao slideshow lên 320px */
-    height: 320px; 
+    /* ĐÃ TĂNG LÊN 400PX theo yêu cầu */
+    height: 400px; 
     border-radius: 10px; overflow: hidden; background: #000;
 }
 #slide-img {
@@ -163,20 +164,16 @@ header {
 .fc-button { background-color: var(--secondary) !important; border: none !important; font-size: 0.7rem !important; }
 .fc-col-header-cell-cushion, .fc-daygrid-day-number { color: var(--text-main); text-decoration: none !important; }
 
-/* --- HIỆU ỨNG LỊCH (FIXED CHO MOBILE) --- */
+/* --- XỬ LÝ SỰ KIỆN TRÊN LỊCH --- */
 .fc-daygrid-day {
     transition: background-color 0.2s ease;
     cursor: pointer;
-    /* Ngăn việc bôi đen text khi chạm trên điện thoại */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    /* Tối ưu chạm */
+    /* Quan trọng: Ngăn trình duyệt zoom/bôi đen khi tap nhanh */
     touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* Chỉ áp dụng hiệu ứng Hover trên thiết bị có chuột (Desktop) */
+/* Chỉ hover đổi màu trên PC */
 @media (hover: hover) {
     .fc-daygrid-day:hover {
         background-color: rgba(192, 108, 132, 0.15) !important;
@@ -186,25 +183,43 @@ header {
     }
 }
 
-/* --- TOOLTIP STYLE (FIXED) --- */
+/* --- TOOLTIP STYLE (FIXED CHO MOBILE) --- */
 #calendar-tooltip {
+    /* Mặc định cho PC (dùng JS để định vị absolute) */
     position: absolute;
-    z-index: 1000;
+    z-index: 9999;
     background: rgba(0, 0, 0, 0.9);
     color: #fff;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    pointer-events: none; /* Chuột/tay không tương tác với tooltip */
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
     display: none;
-    max-width: 200px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    line-height: 1.4;
-    /* Ngăn tooltip bị xuống dòng đột ngột làm nhảy layout */
+    max-width: 250px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    line-height: 1.5;
     white-space: normal;
+    pointer-events: none; /* Chuột xuyên qua để không bị lag */
 }
+
+/* QUAN TRỌNG: Giao diện Mobile (Màn hình < 768px) */
+/* Biến tooltip thành Popup giữa màn hình để tránh nhảy lung tung */
+@media (max-width: 768px) {
+    #calendar-tooltip {
+        position: fixed !important; /* Cố định vị trí so với màn hình */
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important; /* Căn chính giữa */
+        width: 80%;
+        max-width: 300px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.95);
+        border: 1px solid rgba(255,255,255,0.2);
+        animation: fadeIn 0.2s ease-out;
+    }
+}
+
 [data-theme="dark"] #calendar-tooltip {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     color: #000;
 }
 
