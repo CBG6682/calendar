@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveNest - Ngôi nhà của chúng mình</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+</head>
+<body>
+
+    <div id="calendar-tooltip"></div>
+
+    <div class="app-container">
+        <header>
+            <div class="logo">LoveNest <i class="fa-solid fa-heart"></i></div>
+            <div class="header-controls">
+                <button id="theme-btn" class="control-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="music-btn" class="control-btn">
+                    <i class="fa-solid fa-music"></i>
+                </button>
+            </div>
+        </header>
+
+        <nav class="top-nav">
+            <button class="nav-btn active" onclick="switchTab('home')">Trang chủ</button>
+            <button class="nav-btn" onclick="switchTab('calendar')">Lịch & Kỷ niệm</button>
+        </nav>
+
+        <main id="main-content">
+            <div id="tab-home" class="tab-content active">
+                
+                <section class="couple-section">
+                    <div class="avatars">
+                        <img id="img-boy" src="" onerror="this.src='https://via.placeholder.com/100'">
+                        <div class="heart-pulse"><i class="fa-solid fa-heart"></i></div>
+                        <img id="img-girl" src="" onerror="this.src='https://via.placeholder.com/100'">
+                    </div>
+                    <div class="names">
+                        <span id="name-boy">...</span> & <span id="name-girl">...</span>
+                    </div>
+                    <div class="days-counter">
+                        <span id="days-count">0</span>
+                        <p>Ngày bên nhau</p>
+                    </div>
+                </section>
+
+                <section class="reminder-box">
+                    <div class="reminder-icon"><i class="fa-solid fa-bell"></i> Sắp tới:</div>
+                    <div id="next-event-name" class="event-name">Đang tính toán...</div>
+                    <div id="next-event-days" class="event-days">...</div>
+                </section>
+
+                <section class="mood-section">
+                    <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Tâm trạng hôm nay</h3>
+                    <div id="daily-mood-card" class="mood-card">
+                    </div>
+                    <p class="mood-note">Hệ thống random mỗi ngày một quẻ!</p>
+                </section>
+            </div>
+
+            <div id="tab-calendar" class="tab-content">
+                
+                <div class="slideshow-container">
+                    <h3><i class="fa-solid fa-camera-retro"></i> Khoảnh khắc đôi ta</h3>
+                    <div class="slide-frame">
+                        <img id="slide-img" src="" class="fade-effect">
+                        <div class="slide-overlay">
+                            <h4 id="slide-title">Tiêu đề</h4>
+                            <span id="slide-date">Ngày tháng</span>
+                        </div>
+                    </div>
+                    <p class="slide-desc" id="slide-desc">Mô tả...</p>
+                </div>
+
+                <div class="calendar-wrapper">
+                    <div id='calendar'></div>
+                    <p class="calendar-hint"><small>*Di chuột vào ngày kỷ niệm để xem chi tiết</small></p>
+                </div>
+
+                <div class="timetable-section">
+                    <h3><i class="fa-solid fa-calendar-week"></i> Lịch trình tuần này</h3>
+                    
+                    <div class="timetable-controls">
+                        <button id="btn-schedule-boy" class="toggle-btn active" onclick="renderTimetable('boy')">
+                            <i class="fa-solid fa-mars"></i> Anh
+                        </button>
+                        <button id="btn-schedule-girl" class="toggle-btn" onclick="renderTimetable('girl')">
+                            <i class="fa-solid fa-venus"></i> Em
+                        </button>
+                    </div>
+
+                    <div id="schedule-list" class="schedule-list">
+                    </div>
+
+                    <div class="schedule-note">
+                        <i class="fa-solid fa-note-sticky"></i> <span id="schedule-note-text">...</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
