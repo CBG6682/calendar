@@ -4,12 +4,14 @@
     --primary-light: #f67280;
     --secondary: #6c5b7b;
     --accent: #f8b195;
+    
     --bg-body: #ffeaea;
     --bg-app: #fff5f6;
     --bg-card: #ffffff;
     --text-main: #4a4a4a;
     --text-sub: #888888;
     --border-color: #eeeeee;
+    
     --shadow: 0 8px 20px rgba(192, 108, 132, 0.15);
     
     /* FullCalendar Colors */
@@ -32,6 +34,7 @@
     --text-main: #e0e0e0;
     --text-sub: #a0a0a0;
     --border-color: #3f3f55;
+
     --shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 
     /* FullCalendar Colors */
@@ -47,12 +50,11 @@ body { background-color: var(--bg-body); display: flex; justify-content: center;
 
 .app-container {
     width: 100%; 
-    /* Đã tăng chiều rộng lên 800px */
-    max-width: 800px; 
+    max-width: 800px; /* Rộng 800px cho thoải mái */
     background: var(--bg-app); color: var(--text-main);
     box-shadow: 0 0 30px rgba(0,0,0,0.1);
     min-height: 100vh; position: relative; padding-bottom: 20px;
-    overflow-x: hidden; /* Ngăn trượt ngang trên mobile */
+    overflow-x: hidden;
 }
 
 /* Header & Nav */
@@ -86,20 +88,40 @@ header { padding: 15px 20px; display: flex; justify-content: space-between; alig
 .mood-icon { font-size: 3.5rem; display: block; margin-bottom: 5px; }
 .mood-text { font-size: 1.1rem; font-weight: bold; color: var(--text-main); }
 
-/* Slideshow */
+/* === SLIDESHOW (CẬP NHẬT MỚI) === */
 .slideshow-container { background: var(--bg-card); padding: 10px; border-radius: 15px; box-shadow: var(--shadow); margin-bottom: 20px; }
 .slideshow-container h3 { color: var(--secondary); font-size: 1rem; margin-bottom: 10px; text-align: center; }
 
 .slide-frame { 
     position: relative; width: 100%; 
-    /* Đã tăng chiều cao lên 600px */
-    height: 600px; 
-    border-radius: 10px; overflow: hidden; background: #000; 
+    height: 600px; /* Chiều cao lớn */
+    border-radius: 10px; overflow: hidden; 
+    
+    /* Nền đen để tôn ảnh & lấp chỗ trống */
+    background: #000; 
+    
+    /* Căn giữa ảnh */
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
 }
 
-#slide-img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.8s ease-in-out; opacity: 1; }
+#slide-img { 
+    width: 100%; 
+    height: 100%; 
+    /* CONTAIN: Giữ nguyên tỉ lệ ảnh, không bị cắt */
+    object-fit: contain; 
+    transition: opacity 0.8s ease-in-out; 
+    opacity: 1; 
+}
+
 #slide-img.hidden { opacity: 0; }
-.slide-overlay { position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 20px 10px 10px 10px; }
+
+.slide-overlay { 
+    position: absolute; bottom: 0; left: 0; width: 100%; 
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); 
+    color: white; padding: 20px 10px 10px 10px; 
+}
 .slide-desc { margin-top: 8px; font-style: italic; color: var(--text-sub); font-size: 0.9rem; text-align: center; }
 
 /* Calendar Wrapper */
@@ -109,23 +131,22 @@ header { padding: 15px 20px; display: flex; justify-content: space-between; alig
 .fc-button { background-color: var(--secondary) !important; border: none !important; font-size: 0.7rem !important; }
 .fc-col-header-cell-cushion, .fc-daygrid-day-number { color: var(--text-main); text-decoration: none !important; }
 
-/* Fix Lịch Mobile (Chống nhảy layout) */
+/* Fix Lịch Mobile */
 .fc-daygrid-day { transition: background-color 0.2s ease; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
-/* Chỉ hover trên máy tính */
 @media (hover: hover) {
     .fc-daygrid-day:hover { background-color: rgba(192, 108, 132, 0.15) !important; }
     [data-theme="dark"] .fc-daygrid-day:hover { background-color: rgba(255, 255, 255, 0.1) !important; }
 }
 
-/* Tooltip & Popup (Fix Mobile) */
+/* Tooltip & Popup */
 #calendar-tooltip {
-    /* Mặc định cho Desktop */
+    /* Desktop */
     position: absolute; z-index: 9999; background: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px 15px;
     border-radius: 8px; font-size: 0.9rem; display: none; max-width: 250px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     line-height: 1.5; white-space: normal; pointer-events: none;
 }
 
-/* Mobile Popup Style (Hiện giữa màn hình) */
+/* Mobile Popup (Giữa màn hình) */
 @media (max-width: 768px) {
     #calendar-tooltip {
         position: fixed !important; top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important;
