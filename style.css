@@ -19,6 +19,14 @@
     --fc-neutral-bg-color: #f8f9fa;
     --fc-list-event-hover-bg-color: #f1f3f5;
     --fc-today-bg-color: rgba(192, 108, 132, 0.1);
+
+    /* Calendar Background */
+    --bg-calendar: url('assets/images/background_morning.jpg');
+    --calendar-overlay: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
+    --calendar-text: #000000;
+    
+    /* Main App Background */
+    --bg-main: url('assets/images/background_main_light.jpg');
 }
 
 /* --- DARK MODE --- */
@@ -42,6 +50,12 @@
     --fc-neutral-bg-color: #1e1e2e;
     --fc-list-event-hover-bg-color: #3f3f55;
     --fc-today-bg-color: rgba(255, 143, 163, 0.15);
+    
+    --bg-calendar: url('assets/images/background_night.jpg');
+    --calendar-overlay: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    --calendar-text: #ffffff;
+    
+    --bg-main: url('assets/images/background_main_dark.jpg');
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Nunito', sans-serif; transition: background-color 0.3s, color 0.3s, border-color 0.3s; }
@@ -51,7 +65,9 @@ body { background-color: var(--bg-body); display: flex; justify-content: center;
 .app-container {
     width: 100%; 
     max-width: 800px; /* Rộng 800px cho thoải mái */
-    background: var(--bg-app); color: var(--text-main);
+    background: var(--bg-main) no-repeat center center;
+    background-size: cover;
+    color: var(--text-main);
     box-shadow: 0 0 30px rgba(0,0,0,0.1);
     min-height: 100vh; position: relative; padding-bottom: 20px;
     overflow-x: hidden;
@@ -78,6 +94,21 @@ header { padding: 15px 20px; display: flex; justify-content: space-between; alig
 .avatars img { width: 85px; height: 85px; border-radius: 50%; object-fit: cover; border: 3px solid var(--bg-card); box-shadow: var(--shadow); }
 .heart-pulse { color: var(--primary); font-size: 24px; animation: heartbeat 1.5s infinite; }
 .names { font-family: 'Pacifico', cursive; color: var(--secondary); margin-bottom: 15px; font-size: 1.2rem; }
+.names span {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.85); /* Light background for contrast */
+    padding: 5px 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 0 5px;
+    color: var(--primary); /* Use primary color for text inside box */
+    backdrop-filter: blur(4px);
+}
+[data-theme="dark"] .names span {
+    background: rgba(30, 30, 46, 0.85);
+    color: var(--primary-light);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
 .days-counter { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; padding: 20px; border-radius: 20px; box-shadow: var(--shadow); }
 .days-counter span { font-size: 3rem; font-weight: 800; line-height: 1; }
 .reminder-box { background: var(--bg-card); border-left: 5px solid var(--secondary); padding: 15px; margin: 20px 0; border-radius: 8px; box-shadow: var(--shadow); }
@@ -125,11 +156,35 @@ header { padding: 15px 20px; display: flex; justify-content: space-between; alig
 .slide-desc { margin-top: 8px; font-style: italic; color: var(--text-sub); font-size: 0.9rem; text-align: center; }
 
 /* Calendar Wrapper */
-.calendar-wrapper { background: var(--bg-card); padding: 15px; border-radius: 15px; box-shadow: var(--shadow); margin-bottom: 20px; }
-.calendar-hint { text-align: center; color: var(--text-sub); margin-top: 5px; }
-.fc-toolbar-title { font-size: 1.1rem !important; color: var(--primary); }
+.calendar-wrapper { 
+    position: relative; /* Added for ::before positioning */
+    padding: 15px; border-radius: 15px; box-shadow: var(--shadow); margin-bottom: 20px; 
+    overflow: hidden; /* Ensures blur doesn't spill */
+}
+.calendar-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: -10px; /* Scale up slightly to avoid blurred edges showing white */
+    /* Add a white/light scrim overlay to ensure black text pops */
+    background: var(--calendar-overlay), var(--bg-calendar) no-repeat center center;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: 0;
+}
+
+.calendar-wrapper > * {
+    position: relative;
+    z-index: 1;
+    /* Optional: Add slight white shadow to text for extra readability */
+    /* text-shadow: 0 1px 0 rgba(255,255,255,0.4); Removed to suit both dark/light */
+}
+
+.calendar-hint { text-align: center; color: var(--calendar-text); margin-top: 5px; font-weight: bold; }
+/* Override Calendar Colors for Black Text */
+.fc-toolbar-title { font-size: 1.1rem !important; color: var(--calendar-text) !important; }
 .fc-button { background-color: var(--secondary) !important; border: none !important; font-size: 0.7rem !important; }
-.fc-col-header-cell-cushion, .fc-daygrid-day-number { color: var(--text-main); text-decoration: none !important; }
+.fc-col-header-cell-cushion, 
+.fc-daygrid-day-number { color: var(--calendar-text) !important; text-decoration: none !important; }
 
 /* Fix Lịch Mobile */
 .fc-daygrid-day { transition: background-color 0.2s ease; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
