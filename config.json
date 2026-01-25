@@ -225,25 +225,177 @@
       "name": "Lịch của Anh",
       "note": "Tuần này chạy deadline sấp mặt, em nhớ cổ vũ anh nha ❤️",
       "schedule": [
-        { "day": "Thứ 2", "time": "Cả ngày", "task": "Làm việc và yêu em" },
-        { "day": "Thứ 2", "time": "Cả ngày", "task": "Làm việc và yêu em" },
-        { "day": "Thứ 3", "time": "Cả ngày", "task": "Làm việc và yêu em" },
-        { "day": "Thứ 4", "time": "Cả ngày", "task": "Làm việc và yêu em" },
-        { "day": "Thứ 5", "time": "Cả ngày", "task": "Làm việc và yêu em" },
-        { "day": "Thứ 6", "time": "Cả ngày", "task": "Làm việc và yêu em" },
-        { "day": "Thứ 7", "time": "Cả ngày", "task": "Làm việc và yêu em" }
+        {
+          "day": "Thứ 2",
+          "time": "07:30 - 09:45",
+          "task": "CE103.Q25 Vi xử lý-vi điều khiển (P. C102)"
+        },
+        {
+          "day": "Thứ 2",
+          "time": "13:00 - 16:15",
+          "task": "CE103.Q25.2 Vi xử lý-vi điều khiển (TH - P. B3.02)"
+        },
+        {
+          "day": "Thứ 2",
+          "time": "17h-18h",
+          "task": "Tập gym"
+        },
+        {
+          "day": "Thứ 2",
+          "time": "20h-22h",
+          "task": "Làm việc"
+        },
+        {
+          "day": "Thứ 3",
+          "time": "07:30 - 09:45",
+          "task": "IT007.Q24.2 Hệ điều hành (P. B2.02)"
+        },
+        {
+          "day": "Thứ 3",
+          "time": "13:00 - 16:15",
+          "task": "IT007.Q24 Hệ điều hành (P. B3.22)"
+        },
+        {
+          "day": "Thứ 3",
+          "time": "17h-18h",
+          "task": "Tập gym"
+        },
+        {
+          "day": "Thứ 3",
+          "time": "20h-22h",
+          "task": "Làm việc"
+        },
+        {
+          "day": "Thứ 4",
+          "time": "07:30 - 09:45",
+          "task": "CE122.Q22 Phân tích mạch kỹ thuật (P. C104)"
+        },
+        {
+          "day": "Thứ 4",
+          "time": "13:00 - 16:15",
+          "task": "CE122.Q22.2 Phân tích mạch kỹ thuật (TH - P. B5.08)"
+        },
+        {
+          "day": "Thứ 4",
+          "time": "17h-18h",
+          "task": "Tập gym"
+        },
+        {
+          "day": "Thứ 4",
+          "time": "20h-22h",
+          "task": "Làm việc"
+        },
+        {
+          "day": "Thứ 5",
+          "time": "10:00 - 11:30",
+          "task": "SS008.Q24 Kinh tế chính trị Mác - Lênin (P. B5.14)"
+        },
+        {
+          "day": "Thứ 5",
+          "time": "13:00 - 14:30",
+          "task": "SS009.Q27 Chủ nghĩa xã hội khoa học (P. B4.14)"
+        },
+        {
+          "day": "Thứ 5",
+          "time": "17:00 - 18:00",
+          "task": "Tập gym"
+        },
+        {
+          "day": "Thứ 5",
+          "time": "20h-22h",
+          "task": "Làm việc"
+        },
+        {
+          "day": "Thứ 6",
+          "time": "07:30 - 09:45",
+          "task": "CS221.Q21 Xử lý ngôn ngữ tự nhiên (P. B6.04)"
+        },
+        {
+          "day": "Thứ 6",
+          "time": "13:00 - 17:00",
+          "task": "Làm việc"
+        },
+        {
+          "day": "Thứ 6",
+          "time": "17:00 - 18:00",
+          "task": "Tập gym" 
+        },
+        {
+          "day": "Thứ 6",
+          "time": "20h-22h",
+          "task": "Làm việc" 
+        },
+        {
+          "day": "Thứ 7",
+          "time": "10:00 - 17:00",
+          "task": "Làm việc"
+        },
+        {
+          "day": "Chủ nhật",
+          "time": "10:00 - 17:00",
+          "task": "Làm việc"
+        }
       ]
     },
     "girl": {
       "name": "Lịch của Em",
       "note": "Anh nhớ ngủ sớm, bớt làm việc lại nhé 🐷",
       "schedule": [
-        { "day": "Thứ 2", "time": "Cả ngày", "task": "Yêu anh Hoàng" },
-        { "day": "Thứ 3", "time": "Cả ngày", "task": "Yêu anh Hoàng" },
-        { "day": "Thứ 4", "time": "Cả ngày", "task": "Yêu anh Hoàng" },
-        { "day": "Thứ 5", "time": "Cả ngày", "task": "Yêu anh Hoàng" },
-        { "day": "Thứ 6", "time": "Cả ngày", "task": "Yêu anh Hoàng" },
-        { "day": "Thứ 7", "time": "Cả ngày", "task": "Yêu anh Hoàng" }
+        {
+          "day": "Thứ 2", 
+          "time": "6h", 
+          "task": "Thực tập dạy học" 
+        },
+        { 
+          "day": "Thứ 2", 
+          "time": "18h", 
+          "task": "Học môn Vệ sinh trẻ mầm non" 
+        },
+        { 
+          "day": "Thứ 3", 
+          "time": "9h10", 
+          "task": "Học môn Kinh tế chính trị" 
+        },
+        { 
+          "day": "Thứ 4", 
+          "time": "6h30", 
+          "task": "Học môn Xây dựng chương trình lễ hội sự kiện trong cơ sở gd mầm non" 
+        },
+        { 
+          "day": "Thứ 4", 
+          "time": "9h10", 
+          "task": "học Tổ chức hoạt động vui chơi cho trẻ mầm non" 
+        },
+        { 
+          "day": "Thứ 4", 
+          "time": "15h10", 
+          "task": "Học Lý luận dạy học mầm non" 
+        },
+        {
+          "day": "Thứ 5",
+          "time": "6h30",
+          "task": "Học Sức khỏe tâm thần cho trẻ mầm non"
+        },
+        {
+          "day": "Thứ 5",
+          "time": "9h10",
+          "task": "Học môn Vệ sinh trẻ mầm non"
+        },
+        {
+          "day": "Thứ 6",
+          "time": "6h",
+          "task": "Thực tập dạy học"
+        },
+        {
+          "day": "Thứ 7",
+          "time": "Cả ngày",
+          "task": "Lịch trống"
+        },
+        {
+          "day": "Chủ Nhật",
+          "time": "Cả ngày",
+          "task": "Lịch trống"
+        }
       ]
     }
   }
