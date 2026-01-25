@@ -190,16 +190,16 @@
   ],
   "memories": [
     {
-      "date": "08/11/2025",
-      "title": "Đi ăn spicy box",
-      "image": "assets/images/Q-Fk6e83.jpg",
-      "desc": "Ăn hơi phèn do chưa đi làm nuôi em"
+      "date": "20/06/2025",
+      "title": "Sinh nhật của vợ",
+      "image": "assets/images/sinhnhat.jpg",
+      "desc": "Như công chúa"
     },
     {
-      "date": "20/10/2025",
-      "title": "Đi ăn jolibee",
-      "image": "assets/images/TKLH9Aly.jpg",
-      "desc": "Xếp hàng mệt nhưng có em ở bên thì không sao hết"
+      "date": "14/08/2025",
+      "title": "Ở nhà chồng",
+      "image": "assets/images/14-08-2025.jpg",
+      "desc": "Mì chồng nấu"
     },
     {
       "date": "15/08/2025",
@@ -214,10 +214,34 @@
       "desc": "Cay thấy bà"
     },
     {
-      "date": "20/06/2025",
-      "title": "Sinh nhật của vợ",
-      "image": "assets/images/sinhnhat.jpg",
-      "desc": "Như công chúa"
+      "date": "15/08/2025",
+      "title": "Sticker",
+      "image": "assets/images/15-08-2025(1).jpg",
+      "desc": "Sticker chồng mua"
+    },
+    {
+      "date": "15/08/2025",
+      "title": "Chụp photobooth",
+      "image": "assets/images/15-08-2025(2).jpg",
+      "desc": "Chụp photobooth với chồng"
+    },
+    {
+      "date": "20/10/2025",
+      "title": "Đi ăn jolibee",
+      "image": "assets/images/TKLH9Aly.jpg",
+      "desc": "Xếp hàng mệt nhưng có em ở bên thì không sao hết"
+    },
+    {
+      "date": "08/11/2025",
+      "title": "Đi ăn spicy box",
+      "image": "assets/images/Q-Fk6e83.jpg",
+      "desc": "Ăn hơi phèn do chưa đi làm nuôi em"
+    },
+    {
+      "date": "25/01/2026",
+      "title": "Gà chồng xé",
+      "image": "assets/images/25-01-2026.jpg",
+      "desc": "1 năm chưa gặp"
     }
   ],
   "timetables": {
