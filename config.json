@@ -367,53 +367,48 @@
       "schedule": [
         {
           "day": "Thứ 2", 
-          "time": "6h", 
+          "time": "6h30 - 16h20h", 
           "task": "Thực tập dạy học" 
         },
         { 
-          "day": "Thứ 2", 
-          "time": "18h", 
-          "task": "Học môn Vệ sinh trẻ mầm non" 
-        },
-        { 
           "day": "Thứ 3", 
-          "time": "9h10", 
-          "task": "Học môn Kinh tế chính trị" 
+          "time": "6h30 - 11h40", 
+          "task": "Kinh tế chính trị" 
         },
         { 
           "day": "Thứ 4", 
-          "time": "6h30", 
-          "task": "Học môn Xây dựng chương trình lễ hội sự kiện trong cơ sở gd mầm non" 
+          "time": "6h30 - 9h", 
+          "task": "Xây dựng chương trình lễ hội sự kiện trong cơ sở gd mầm non" 
         },
         { 
           "day": "Thứ 4", 
-          "time": "9h10", 
-          "task": "học Tổ chức hoạt động vui chơi cho trẻ mầm non" 
+          "time": "9h10 - 11h40", 
+          "task": "Tổ chức hoạt động vui chơi cho trẻ mầm non" 
         },
         { 
           "day": "Thứ 4", 
-          "time": "15h10", 
-          "task": "Học Lý luận dạy học mầm non" 
+          "time": "15h10 - 17h40", 
+          "task": "Lý luận dạy học mầm non" 
         },
         {
           "day": "Thứ 5",
-          "time": "6h30",
-          "task": "Học Sức khỏe tâm thần cho trẻ mầm non"
+          "time": "6h30 - 9h",
+          "task": "Sức khỏe tâm thần cho trẻ mầm non"
         },
         {
           "day": "Thứ 5",
-          "time": "9h10",
-          "task": "Học môn Vệ sinh trẻ mầm non"
+          "time": "15h10 - 17h40",
+          "task": "Vệ sinh trẻ mầm non"
         },
         {
           "day": "Thứ 6",
-          "time": "6h",
+          "time": "6h30 - 16h20",
           "task": "Thực tập dạy học"
         },
         {
           "day": "Thứ 7",
-          "time": "Cả ngày",
-          "task": "Lịch trống"
+          "time": "9h10 - 11h40",
+          "task": "Phát triển chương trình giáo dục mầm non"
         },
         {
           "day": "Chủ Nhật",
