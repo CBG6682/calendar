@@ -372,17 +372,17 @@
         },
         { 
           "day": "Thứ 3", 
-          "time": "6h30 - 11h40", 
+          "time": "06h30 - 11h40", 
           "task": "Kinh tế chính trị" 
         },
         { 
           "day": "Thứ 4", 
-          "time": "6h30 - 9h", 
+          "time": "06h30 - 09h00", 
           "task": "Xây dựng chương trình lễ hội sự kiện trong cơ sở gd mầm non" 
         },
         { 
           "day": "Thứ 4", 
-          "time": "9h10 - 11h40", 
+          "time": "09h10 - 11h40", 
           "task": "Tổ chức hoạt động vui chơi cho trẻ mầm non" 
         },
         { 
@@ -392,7 +392,7 @@
         },
         {
           "day": "Thứ 5",
-          "time": "6h30 - 9h",
+          "time": "06h30 - 09h00",
           "task": "Sức khỏe tâm thần cho trẻ mầm non"
         },
         {
@@ -402,12 +402,12 @@
         },
         {
           "day": "Thứ 6",
-          "time": "6h30 - 16h20",
+          "time": "06h30 - 16h20",
           "task": "Thực tập dạy học"
         },
         {
           "day": "Thứ 7",
-          "time": "9h10 - 11h40",
+          "time": "09h10 - 11h40",
           "task": "Phát triển chương trình giáo dục mầm non"
         },
         {
