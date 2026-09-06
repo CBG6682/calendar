@@ -251,113 +251,43 @@
       "schedule": [
         {
           "day": "Thứ 2",
-          "time": "07:30 - 09:45",
-          "task": "CE103.Q25 Vi xử lý-vi điều khiển (P. C102)"
+          "time": "08:15 - 11:25",
+          "task": "Các thiết bị và mạch điện tử"
         },
         {
           "day": "Thứ 2",
-          "time": "13:00 - 16:15",
-          "task": "CE103.Q25.2 Vi xử lý-vi điều khiển (TH - P. B3.02)"
-        },
-        {
-          "day": "Thứ 2",
-          "time": "17h-18h",
-          "task": "Tập gym"
-        },
-        {
-          "day": "Thứ 2",
-          "time": "20h-22h",
-          "task": "Làm việc"
+          "time": "13:00 - 16:55",
+          "task": "Các thiết bị và mạch điện tử (Thực hành - cách tuần)"
         },
         {
           "day": "Thứ 3",
-          "time": "07:30 - 09:45",
-          "task": "IT007.Q24.2 Hệ điều hành (P. B2.02)"
+          "time": "07:30 - 11:25",
+          "task": "Thiết kế luận lý số (Thực hành - cách tuần)"
         },
         {
           "day": "Thứ 3",
-          "time": "13:00 - 16:15",
-          "task": "IT007.Q24 Hệ điều hành (P. B3.22)"
-        },
-        {
-          "day": "Thứ 3",
-          "time": "17h-18h",
-          "task": "Tập gym"
-        },
-        {
-          "day": "Thứ 3",
-          "time": "20h-22h",
-          "task": "Làm việc"
+          "time": "13:00 - 16:10",
+          "task": "Thiết kế luận lý số"
         },
         {
           "day": "Thứ 4",
-          "time": "07:30 - 09:45",
-          "task": "CE122.Q22 Phân tích mạch kỹ thuật (P. C104)"
+          "time": "09:55 - 11:25",
+          "task": "Giải thuật xử lý song song và phân bố"
         },
         {
           "day": "Thứ 4",
-          "time": "13:00 - 16:15",
-          "task": "CE122.Q22.2 Phân tích mạch kỹ thuật (TH - P. B5.08)"
-        },
-        {
-          "day": "Thứ 4",
-          "time": "17h-18h",
-          "task": "Tập gym"
-        },
-        {
-          "day": "Thứ 4",
-          "time": "20h-22h",
-          "task": "Làm việc"
-        },
-        {
-          "day": "Thứ 5",
-          "time": "10:00 - 11:30",
-          "task": "SS008.Q24 Kinh tế chính trị Mác - Lênin (P. B5.14)"
-        },
-        {
-          "day": "Thứ 5",
-          "time": "13:00 - 14:30",
-          "task": "SS009.Q27 Chủ nghĩa xã hội khoa học (P. B4.14)"
-        },
-        {
-          "day": "Thứ 5",
-          "time": "17:00 - 18:00",
-          "task": "Tập gym"
-        },
-        {
-          "day": "Thứ 5",
-          "time": "20h-22h",
-          "task": "Làm việc"
+          "time": "15:25 - 16:55",
+          "task": "Giáo dục thể chất 1"
         },
         {
           "day": "Thứ 6",
-          "time": "07:30 - 09:45",
-          "task": "CS221.Q21 Xử lý ngôn ngữ tự nhiên (P. B6.04)"
+          "time": "07:30 - 10:40",
+          "task": "Thiết kế hệ thống nhúng"
         },
         {
           "day": "Thứ 6",
-          "time": "13:00 - 17:00",
-          "task": "Làm việc"
-        },
-        {
-          "day": "Thứ 6",
-          "time": "17:00 - 18:00",
-          "task": "Tập gym" 
-        },
-        {
-          "day": "Thứ 6",
-          "time": "20h-22h",
-          "task": "Làm việc" 
-        },
-        {
-          "day": "Thứ 7",
-          "time": "10:00 - 17:00",
-          "task": "Làm việc"
-        },
-        {
-          "day": "Chủ nhật",
-          "time": "10:00 - 17:00",
-          "task": "Làm việc"
+          "time": "13:00 - 16:55",
+          "task": "Thiết kế hệ thống nhúng (Thực hành - cách tuần)"
         }
       ]
     },
